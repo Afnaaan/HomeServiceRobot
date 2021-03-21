@@ -2,6 +2,9 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 
+double pickUp[2] = {-1.0, 3.0};
+double dropOff[2] = {4.0, 1.0};
+
 // Define a client for to send goal requests to the move_base server through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
@@ -25,8 +28,8 @@ int main(int argc, char** argv){
     pickup_zone.target_pose.header.stamp = ros::Time::now();
 
     // Define a position and orientation for the robot to reach
-    pickup_zone.target_pose.pose.position.x = -1.0;
-    pickup_zone.target_pose.pose.position.y = 3.0;
+    pickup_zone.target_pose.pose.position.x = pickUp[0];
+    pickup_zone.target_pose.pose.position.y = pickUp[1];
     pickup_zone.target_pose.pose.orientation.w = 1.0;
 
     // Display a message that we In our way to pickup destination
@@ -51,8 +54,8 @@ int main(int argc, char** argv){
     drop_off_zone.target_pose.header.stamp = ros::Time::now();
 
     // Define a position and orientation for the robot to reach
-    drop_off_zone.target_pose.pose.position.x = -3.0;
-    drop_off_zone.target_pose.pose.position.y = -2.0;
+    drop_off_zone.target_pose.pose.position.x = dropOff[0];
+    drop_off_zone.target_pose.pose.position.y = dropOff[1];
     drop_off_zone.target_pose.pose.orientation.w = 1.0;
 
     // Display a message that we In our way to drop off destination

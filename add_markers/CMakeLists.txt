@@ -152,6 +152,9 @@ include_directories(
 add_executable(add_markers src/add_markers.cpp)
 target_link_libraries(add_markers ${catkin_LIBRARIES})
 
+add_executable(add_markers_virtual_objects src/add_markers_virtual_objects.cpp)
+target_link_libraries(add_markers_virtual_objects ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
