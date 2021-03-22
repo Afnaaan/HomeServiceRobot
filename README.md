@@ -42,17 +42,18 @@ First create a catkin workspace
 [To know how see catkin tutorial](http://wiki.ros.org/ROS/Tutorials/catkin/CreateWorkspace)
 
 #### To map your environment
-1- add your world file in 'map' folder
-2- edit value of 'TURTLEBOT_GAZEBO_WORLD_FILE' in test_slam.h script
-3- type in these commands in the catkin workspace
+
+1. add your world file in 'map' folder
+2. edit value of 'TURTLEBOT_GAZEBO_WORLD_FILE' in test_slam.h script
+3. type in these commands in the catkin workspace
 ```
 > catkin_make
 > source devel/setup.bash
 > cd src/scripts
 > ./home_service.sh
 ```
-4- move your robot with keyboard_teleop termenal in your world to explor and map the area you want to map
-5- in the path you want to save your map in run this cmd "rosrun map_server map_saver"
+4. move your robot with keyboard_teleop termenal in your world to explor and map the area you want to map
+5. in the path you want to save your map in run this cmd "rosrun map_server map_saver"
 
 *to use this map in my services edit value of 'TURTLEBOT_GAZEBO_MAP_FILE' in its script*
 
