@@ -7,7 +7,7 @@ Localization) from turtlebot_gazebo package, using the ROS Navigation stack to p
 contoling the robot with turtlebot_teleop package, and viewing navigation with Rviz from turtlebot_rviz_launchers in turtlebot_interactions package.
 **Keywords:** Udacity, ROS, Robot, Turtlebot, Gazebo, Rviz, Mapping, Gmapping, SLAM, Localization, Monte Carlo, Navigation stack, Path planning.
 
-###### Packages Used:
+### Packages Used:
 #### Ros Packages
 * [slam_gmapping](https://github.com/ros-perception/slam_gmapping)
   * This package creates a map of the environment using laser-based SLAM.
@@ -24,7 +24,7 @@ contoling the robot with turtlebot_teleop package, and viewing navigation with R
 * [add_markers](https://github.com/Afnaaan/HomeServiceRobot/tree/main/add_markers)
   * This package publishes a virtual object in Rviz that appears in the pick up goal location. Once the robot reaches the pick up location the object disappears and the robot is then directed to the drop off goal location by the pick_objects package. Once the robot reaches the drop off the goal location then the object appears. 
   
-  ### Scripts
+### Scripts
 * ./test_slam.sh
    * allows user to teleop the robot and have it interface with SLAM to visualize the map in RViz
 * ./test_navigation.sh
@@ -50,6 +50,7 @@ First create a catkin workspace
 > source devel/setup.bash
 > cd src/scripts
 > ./home_service.sh
+```
 4- move your robot with keyboard_teleop termenal in your world to explor and map the area you want to map
 5- in the path you want to save your map in run this cmd "rosrun map_server map_saver"
 
@@ -62,3 +63,4 @@ type in these commands in the catkin workspace.
 > source devel/setup.bash
 > cd src/scripts
 > ./home_service.sh
+```
